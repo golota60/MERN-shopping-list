@@ -1,0 +1,30 @@
+{
+  "name": "shopping-list",
+  "version": "1.0.0",
+  "description": "A simple MERN stack shopping list",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js",
+    "server": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/golota60/MERN-shopping-list.git"
+  },
+  "author": "Szymon Wiszczuk",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/golota60/MERN-shopping-list/issues"
+  },
+  "homepage": "https://github.com/golota60/MERN-shopping-list#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "concurrently": "^4.1.0",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.6.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}

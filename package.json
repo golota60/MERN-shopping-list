@@ -4,8 +4,11 @@
   "description": "A simple MERN stack shopping list",
   "main": "server.js",
   "scripts": {
+    "client-install": "npm install --prefix client",
     "test": "node server.js",
-    "server": "nodemon --exec \"node -r dotenv/config\" server.js"
+    "server": "nodemon --exec \"node -r dotenv/config\" server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server \" \"npm run client\""
   },
   "repository": {
     "type": "git",

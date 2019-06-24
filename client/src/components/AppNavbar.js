@@ -1,13 +1,16 @@
 import React,{Component} from 'react';
 import{
-    Collapse,
+  Collapse,
   Navbar,
   NavbarToggler,
   NavbarBrand,
   Nav,
   NavItem,
   NavLink,
-  Container
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem 
 } from 'reactstrap';
 
 class AppNavbar extends Component{
@@ -28,21 +31,36 @@ toggle(){
 
 render(){
     return (
-      <Navbar color="black" light expand="sm" className="mb-5">
-        <Container>
-          <NavbarBrand href="/">Shopping List</NavbarBrand>
+      <div>
+ <Navbar color="dark" dark expand="md">
+          <NavbarBrand href="/">Shopping list</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="http://github.com/golota60">
-                  My Github 
-                </NavLink>
+                <NavLink href="/components/">Components</NavLink>
               </NavItem>
+              <NavItem>
+                <NavLink href="https://github.com/golota60/MERN-shopping-list">GitHub</NavLink>
+              </NavItem>
+              <UncontrolledDropdown nav inNavbar>
+                <DropdownToggle nav caret>
+                  Options
+                </DropdownToggle>
+                <DropdownMenu right>
+                  <DropdownItem href="https://google.pl">
+                    google
+                  </DropdownItem>
+                  <DropdownItem divider />
+                  <DropdownItem>
+                    Reset
+                  </DropdownItem>
+                </DropdownMenu>
+              </UncontrolledDropdown>
             </Nav>
           </Collapse>
-        </Container>
-      </Navbar>
+        </Navbar>
+      </div>
     );
 }
 }

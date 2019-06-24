@@ -4,7 +4,6 @@ function getDbUsername() {
  }
  
  function getDbPassword() {
-   console.log(process.env.REACT_APP_DB_PASSWORD);
    return process.env.REACT_APP_DB_PASSWORD;
  }
 
